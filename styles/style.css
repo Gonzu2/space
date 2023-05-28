@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --main-text-color: #e7e7e7;
+  --background-color: #000000;
+  --black-text-color: #000000;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  background-image: url("../images/simple-star-space-background-effect-023768280_prevstill.webp");
+  background-size: cover;
+  background-repeat: repeat-y;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* Global styling Start */
+
+a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  color: var(--main-text-color);
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Global styling end */
+
+/* Navbar styling start */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0;
+  padding: 10px 15px 10px 15px;
+  min-height: 50px;
+
+  color: var(--main-text-color);
+}
+
+.navbar-brand {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbar-invite-link {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.navbar-item {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* Navbar styling end */
+
+/* Home section styling start */
+
+.home-section-container {
+  width: 100dvw;
+  height: 100dvh;
+
+  margin: 100px 0 0 0;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-section-image {
+  filter: drop-shadow(0 0.35rem 3.25rem rgb(255, 255, 255, 0.6));
+  border-radius: 50%;
+  cursor: pointer;
+  transition: scale 0.25s ease-in-out;
+}
+
+.home-section-image:hover {
+  scale: 1.05;
+}
+
+.home-section-info-container {
+  margin: 25px 0 0 0;
+
+  display: flex;
+  justify-content: start;
+  align-self: center;
+  flex-direction: column;
+
+  gap: 50px;
+}
+
+.home-section-name {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.home-section-description {
+  font-weight: 300;
+}
+
+.home-section-buttons {
+  margin: 150px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.home-section-button {
+  background-color: var(--main-text-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.home-section-button:hover {
+  opacity: 0.8;
+}
+
+.home-section-button a {
+  color: var(--black-text-color);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* Home section styling end */
