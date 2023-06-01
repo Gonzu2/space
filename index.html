@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,55 +9,2011 @@
     <meta name="theme-color" content="#e7e7e7" />
     <title>Spacey Boi!</title>
 
+    <link
+      rel="preload"
+      href="./images/spaceyboi500.webp"
+      as="image"
+      fetchpriority="high"
+      type="image/webp"
+      media="(width: 423px)" />
+    <link rel="preload" href="./styles/style.css" as="style" />
+    <link rel="preload" href="./scripts/script.js" as="script" />
+    <link rel="preconnect" href="./privacy-policy.html" />
+    <link rel="preconnect" href="./tos.html" />
+
+    <link rel="preconnect" href="https://invite.spaceyboi.com" />
+    <link rel="preconnect" href="https://spaceyboi.com/discovery" />
+    <link rel="preconnect" href="https://support.spaceyboi.com" />
+    <link rel="preconnect" href="https://topgg.spaceyboi.com" />
+    <link rel="preconnect" href="https://vote.spaceyboi.com" />
+    <link rel="preconnect" href="https://spaceyboi.com/" />
+    <link rel="preconnect" href="https://link.clouddev.cc/@Lonely" />
+
+    <link rel="icon" type="image/x-icon" href="./images/spaceyboi500.ico" />
+
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <h1 class="navbar-brand"><a href="#">Spacey Boi!</a></h1>
+      <h1 class="navbar-brand hidden">
+        <a href="#">Spacey Boi!</a>
+      </h1>
+      <!-- Mobile stuff -->
+      <div class="navbar-burger hidden" onclick=" openOffCanvas(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <div id="navbar-offcanvas">
+        <div class="navbar-offcanvas-blur"></div>
+        <div class="navbar-offcanvas-container">
+          <h1 class="navbar-offcanvas-invite-link">
+            <a href="https://invite.spaceyboi.com" target="_blank"
+              >Invite me!</a
+            >
+          </h1>
+          <ul class="navbar-offcanvas-items">
+            <li class="navbar-offcanvas-item">
+              <a href="#commands">Commands</a>
+            </li>
+            <li class="navbar-offcanvas-item">
+              <a href="https://invite.spaceyboi.com" target="_blank">Invite</a>
+            </li>
+            <li class="navbar-offcanvas-item">
+              <a href="/privacy-policy.html">Privacy & Policy</a>
+            </li>
+            <li class="navbar-offcanvas-item"><a href="/tos.html">ToS</a></li>
+            <li class="navbar-offcanvas-item">
+              <a href="https://spaceyboi.com/discovery" target="_blank"
+                >Discovery</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Mobile stuff end -->
+
       <ul class="navbar-items">
-        <li class="navbar-item"><a href="#commands">Commands</a></li>
-        <li class="navbar-item"><a href="#invite-link">Invite</a></li>
-        <li class="navbar-item">
-          <a href="/privacy-policy">Privacy & Policy</a>
+        <li class="navbar-item hidden"><a href="#commands">Commands</a></li>
+        <li class="navbar-item hidden">
+          <a href="https://invite.spaceyboi.com" target="_blank">Invite</a>
         </li>
-        <li class="navbar-item"><a href="/tos">ToS</a></li>
-        <li class="navbar-item"><a href="#discovery-link">Discovery</a></li>
+        <li class="navbar-item hidden">
+          <a href="/privacy-policy.html">Privacy & Policy</a>
+        </li>
+        <li class="navbar-item hidden"><a href="/tos.html">ToS</a></li>
+        <li class="navbar-item hidden">
+          <a href="https://spaceyboi.com/discovery/" target="_blank"
+            >Discovery</a
+          >
+        </li>
       </ul>
-      <h1 class="navbar-invite-link"><a href="#invite-link">Invite me!</a></h1>
+      <h1 class="navbar-invite-link hidden">
+        <a href="https://invite.spaceyboi.com" target="_blank">Invite me!</a>
+      </h1>
     </nav>
     <!-- Navbar end -->
 
     <!-- Home section start -->
     <container class="home-section-container">
-      <a href="#">
+      <a href="#" class="home-section-image-container">
         <img
           src="./images/spaceyboi500.webp"
           alt="spacey boi!"
-          class="home-section-image" />
+          class="home-section-image hidden"
+          height="423px"
+          width="423px" />
       </a>
       <div class="home-section-info-container">
-        <h1 class="home-section-name"><a href="#">Spacey Boi!</a></h1>
-        <h2 class="home-section-description">
+        <h1 class="home-section-name hidden">
+          <a href="#">Spacey Boi!</a>
+        </h1>
+        <h2 class="home-section-description hidden">
           A blazing fast multifunctional music discord bot.
         </h2>
       </div>
 
       <ul class="home-section-buttons">
-        <li class="home-section-button">
-          <a href="#invite-link">Invite me</a>
+        <li class="home-section-button hidden">
+          <a href="https://invite.spaceyboi.com" target="_blank">Invite me</a>
         </li>
-        <li class="home-section-button">
-          <a href="#get-support-link">Get support</a>
+        <li class="home-section-button hidden">
+          <a href="https://support.spaceyboi.com" target="_blank"
+            >Get support</a
+          >
         </li>
-        <li class="home-section-button">
-          <a href="#top.gg-link">Top.gg</a>
+        <li class="home-section-button hidden">
+          <a href="https://topgg.spaceyboi.com" target="_blank">Top.gg</a>
         </li>
-        <li class="home-section-button">
-          <a href="#vote-link">Vote</a>
+        <li class="home-section-button hidden">
+          <a href="https://vote.spaceyboi.com" target="_blank">Vote</a>
         </li>
       </ul>
     </container>
     <!-- Home section end -->
+
+    <!-- Commands section -->
+    <container class="commands-container">
+      <ul class="commands-feature-card-container">
+        <li class="commands-feature-card hidden">
+          <div class="commands-card-wrapper">
+            <!-- Card icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+              class="commands-card-icon">
+              <path
+                d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z" />
+            </svg>
+            <!-- Card title -->
+            <h1 class="commands-card-title">Speed!</h1>
+            <!-- Card description -->
+            <h2 class="commands-card-description">Speed is key!</h2>
+          </div>
+        </li>
+        <li class="commands-feature-card hidden">
+          <div class="commands-card-wrapper">
+            <!-- Card icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              class="commands-card-icon">
+              <path
+                d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z" />
+            </svg>
+            <!-- Card title -->
+            <h1 class="commands-card-title">Security</h1>
+            <!-- Card description -->
+            <h2 class="commands-card-description">Your privacy is respected</h2>
+          </div>
+        </li>
+        <li class="commands-feature-card hidden">
+          <div class="commands-card-wrapper">
+            <!-- Card icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="commands-card-icon">
+              <path
+                d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-44.2 0-80-35.8-80-80V384 336 288C0 146.6 114.6 32 256 32s256 114.6 256 256v48 48 16c0 44.2-35.8 80-80 80c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.1 30.4 6C449.6 159.4 362.1 80 256 80z" />
+            </svg>
+            <!-- Card title -->
+            <h1 class="commands-card-title">Music</h1>
+            <!-- Card description -->
+            <h2 class="commands-card-description">High quality music!</h2>
+          </div>
+        </li>
+      </ul>
+
+      <container class="commands-container-inner" id="commands">
+        <ul class="commands-selection-buttons">
+          <li>
+            <button
+              class="commands-selection-button selected hidden"
+              id="button-all"
+              onclick="showAllItems()">
+              All
+            </button>
+          </li>
+          <li>
+            <button
+              class="commands-selection-button unselected hidden"
+              id="button-general"
+              onclick="showGeneralItems()">
+              General
+            </button>
+          </li>
+          <li>
+            <button
+              class="commands-selection-button unselected hidden"
+              id="button-info"
+              onclick="showInfoItems()">
+              Info
+            </button>
+          </li>
+          <li>
+            <button
+              class="commands-selection-button unselected hidden"
+              id="button-moderation"
+              onclick="showModerationItems()">
+              Moderation
+            </button>
+          </li>
+        </ul>
+        <container class="commands-output-container hidden">
+          <ul class="commands-output">
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="general">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    help -
+                    <span class="command-description"
+                      >Provides the help page for Spacey Boi.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/help [command]</li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Examples:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">/help ban</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="general">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    music -
+                    <span class="command-description"
+                      >Play some music (use again with no music selected to
+                      access menu).</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">
+                      /music [url] or [song name]
+                    </li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Examples:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /music
+                      <a
+                        style="color: #5865f2"
+                        href="https://spaceyboi.com/"
+                        target="_blank"
+                        >Cupid FIFTY FIFTY</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="general">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    invite -
+                    <span class="command-description"
+                      >Creates 10 day invite for this server.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/invite</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="info">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    uptime -
+                    <span class="command-description">Returns uptime.</span>
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/uptime</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="info">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    userinfo -
+                    <span class="command-description"
+                      >Displays userinfo about the selected user.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/userinfo [member]</li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /userinfo Lonely#1111
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="info">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    serverinfo -
+                    <span class="command-description"
+                      >Gets You information about the server.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/serverinfo</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="info">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    roleinfo -
+                    <span class="command-description"
+                      >Displays role about the selected role.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/roleinfo [role]</li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /roleinfo @Developer
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="info">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    channelstats -
+                    <span class="command-description"
+                      >Fetches information about the channel where the cmd is
+                      used</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/channelstats</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="info">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    mentions -
+                    <span class="command-description"
+                      >Counts the amount of mentions You got in last certain
+                      amount of messages</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">
+                      /mention [limit] [user]
+                    </li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /mention 100 Lonely#1111
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="info">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    warn list -
+                    <span class="command-description"
+                      >Checks total warnings for a user.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/warn list [user]</li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /warn list Lonely#1111
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="info">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    membercount -
+                    <span class="command-description"
+                      >Counts total members.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/membercount</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="info">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    sys -
+                    <span class="command-description"
+                      >Some info about the system.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/sys</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="info">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    poll -
+                    <span class="command-description"
+                      >Creates a pool with 2 option</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">
+                      /poll [question] [a] [b]
+                    </li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /poll Is the sky blue? Yes No
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="info">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    qrcode -
+                    <span class="command-description">Generate a QR code.</span>
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/qrcode [url]</li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /qrcode
+                      <a
+                        style="color: #5865f2"
+                        href="https://spaceyboi.com/"
+                        target="_blank"
+                        >https://spaceyboi.com/</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    ban -
+                    <span class="command-description"
+                      >Bans a Member from the server.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">
+                      /ban [member] [reason]
+                    </li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /ban Lonely#1111 Too Good!
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    unban -
+                    <span class="command-description"
+                      >Unbans a member from the server.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">
+                      /unban [member] [reason]
+                    </li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /unban Lonely#1111 Too Good!
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    kick -
+                    <span class="command-description"
+                      >Kicks a user from the server.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">
+                      /kick [member] [reason]
+                    </li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /kick Lonely#1111 Too Good!
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    delete -
+                    <span class="command-description"
+                      >Delete an amount of messages.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/delete [amount]</li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">/delete 100</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    timeout -
+                    <span class="command-description"
+                      >Applies timeouts to a member.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">
+                      /timeout [member] [minutes]
+                    </li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /timeout Lonely#1111 60
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    mute -
+                    <span class="command-description"
+                      >Mutes a member for a specific duration of time.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">
+                      /mute [member] [time] [reason]
+                    </li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /unmute Lonely#1111 60m Too Good!
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    unmute -
+                    <span class="command-description">Unmutes a member.</span>
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/unmute [member]</li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /unmute Lonely#1111
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    slowmode -
+                    <span class="command-description"
+                      >Changes channels slowmode.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/slowmode [seconds]</li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">/slowmode 5</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    nick -
+                    <span class="command-description"
+                      >Change a members nickname.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">
+                      /nick [member] [nickname]
+                    </li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /nick Lonely#1111 NotLonely
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    lock -
+                    <span class="command-description"
+                      >Locks the channel for the server members.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/lock</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    unlock -
+                    <span class="command-description"
+                      >Unlocks the channel for the server members.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/unlock</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    nukechannel -
+                    <span class="command-description"
+                      >Nukes a channel and re-create another clone of it.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/nukechannel</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    role -
+                    <span class="command-description"
+                      >add or remove role from a User.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">
+                      /role [member] [role]
+                    </li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /role Lonely#1111 @Developer
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    warn add -
+                    <span class="command-description">Warns a member.</span>
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">
+                      /warn add [member] [reason]
+                    </li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /warn add Lonely#1111 Too Good!
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    warn remove -
+                    <span class="command-description"
+                      >Removes a warning from a member.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">
+                      /warn remove [warn_id]
+                    </li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /warn remove obUlp2ZlMH4
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    warn list -
+                    <span class="command-description"
+                      >Shows a list of warnings for a member.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/warn list [member]</li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /warn remove Lonely#1111
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    autorole -
+                    <span class="command-description"
+                      >Sets up auto role for your server.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/autorole [role]</li>
+                  </ul>
+                </div>
+                <div class="command-example">
+                  <h1 class="command-example-title">Example:</h1>
+                  <ul class="command-example-list">
+                    <li class="command-example-list-item">
+                      /autorole @Developer
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li
+              class="command"
+              data-selected="unselected"
+              data-command-type="moderation">
+              <div class="command-inner">
+                <div class="command-inner-wrapper-main">
+                  <!-- / icon -->
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="command-slash-icon">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.11111 0C1.39289 0 0 1.39289 0 3.11111V24.8889C0 26.6072 1.39289 28 3.11111 28H24.8889C26.6072 28 28 26.6072 28 24.8889V3.11111C28 1.39289 26.6072 0 24.8889 0H3.11111ZM21.6214 8.42207L19.4216 6.22219L6.22222 19.4216L8.4221 21.6214L21.6214 8.42207Z"
+                      fill="#303038"
+                      style="transition: fill 0.2s ease-in-out 0s"></path>
+                  </svg>
+                  <!-- command name -->
+                  <h1 class="command-name">
+                    autorolereset -
+                    <span class="command-description"
+                      >Resets the servers auto role.</span
+                    >
+                  </h1>
+                </div>
+                <!-- command expansion button -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  class="command-expansion-button">
+                  <path
+                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                </svg>
+              </div>
+              <!-- command expansion, hidden by default -->
+              <div class="command-expansion">
+                <div class="command-usage">
+                  <h1 class="command-usage-title">Usage:</h1>
+                  <ul class="command-usage-list">
+                    <li class="command-usage-list-item">/autorolereset</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </container>
+      </container>
+    </container>
+    <!-- Commands section end -->
+
+    <!-- Footer section -->
+    <container class="footer-container">
+      <ul class="footer-info">
+        <li class="footer-info-header hidden">
+          <h1><a href="#">Spacey Boi!</a></h1>
+        </li>
+        <li class="footer-info-text hidden">
+          <p>
+            Bot developed by
+            <a href="https://link.clouddev.cc/@Lonely" target="_blank"
+              >Lonely#1111</a
+            >
+          </p>
+        </li>
+        <li class="footer-info-text hidden">
+          <p>Website developed by Gonzu#7560</p>
+        </li>
+        <li class="footer-info-text hidden">
+          <p>
+            Make sure to join the
+            <a href="https://support.spaceyboi.com" target="_blank"
+              >support server! <3</a
+            >
+          </p>
+        </li>
+      </ul>
+      <ul class="footer-navigation">
+        <li class="footer-navigation-item hidden">
+          <a href="#" class="hidden">Back to top</a>
+        </li>
+        <li class="footer-navigation-item">
+          <a href="https://support.spaceyboi.com" target="_blank" class="hidden"
+            >Support</a
+          >
+        </li>
+        <li class="footer-navigation-item">
+          <a href="https://invite.spaceyboi.com" target="_blank" class="hidden"
+            >Invite</a
+          >
+        </li>
+        <li class="footer-navigation-item">
+          <a href="mailto:support@spaceboi.com" class="hidden">Email</a>
+        </li>
+      </ul>
+    </container>
+    <!-- Footer section end -->
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
